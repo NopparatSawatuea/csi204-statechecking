@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple Web Page</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="container">
+        <h1>กดปุ่ม เพื่อเปลี่ยนสี</h1>
+        <button class="button" onclick="changeBackgroundColor()">กดปุ่ม</button>
+        <h1>กด เพื่อแสดงข้อความ</h1>
+        <button class="button" id="clickButton">กดปุ่ม</button>
+        <button class="button" id="mouseoverButton">เลื่อนเมาส์มาที่นี่</button>
+      </div>
+      <div class="container2">
+        <h1>พิมพ์ข้อความที่นี่</h1>
+        <input
+          class="input"
+          type="text"
+          id="keyupInput"
+          placeholder="พิมพ์ข้อความที่นี่"
+        />
+        <p class="p" id="message">Hello</p>
+      </div>
+      <div class="container3">
+        <h1>แบบฟอร์มรับข้อมูล</h1>
+
+        <form id="userForm">
+          <label for="name">ชื่อ:</label>
+          <input
+            class="input"
+            type="text"
+            id="name"
+            placeholder="กรอกชื่อ"
+            name="name"
+            required
+          /><br /><br />
+
+          <label for="email">อีเมล:</label>
+          <input
+            class="input"
+            type="email"
+            id="email"
+            placeholder="กรอกอีเมล"
+            name="email"
+            required
+          /><br /><br />
+
+          <button class="button" type="submit">ส่งข้อมูล</button>
+        </form>
+
+        <p id="message"></p>
+      </div>
+    </div>
+    <div class="wrapper">
+      <div class="container4">
+        <h2>คำนวณพื้นที่วงกลม</h2>
+        <label for="radius">รัศมี:</label>
+        <input
+          class="input"
+          type="number"
+          id="radius"
+          placeholder="กรอกค่ารัศมี"
+        />
+        <button class="button" onclick="calculateArea()">คำนวณ</button>
+
+        <p id="result"></p>
+      </div>
+      <div class="container5">
+        <h2>ตรวจสอบอายุและเลขคู่-คี่</h2>
+
+        <!-- ฟอร์มรับค่าอายุ -->
+        <label for="age">กรอกอายุของคุณ:</label>
+        <input class="input" type="number" id="age" placeholder="กรอกอายุ" />
+        <button class="button" onclick="checkAge()">ตรวจสอบวัย</button>
+
+        <br /><br />
+
+        <!-- ฟอร์มรับตัวเลข -->
+        <label for="number">กรอกตัวเลข:</label>
+        <input
+          class="input"
+          type="number"
+          id="number"
+          placeholder="กรอกตัวเลข"
+        />
+        <button class="button" onclick="checkEvenOdd()">
+          ตรวจสอบเลขคู่-คี่
+        </button>
+
+        <p id="result"></p>
+      </div>
+      <div class="container6">
+        <h2>Loop Algorithm</h2>
+
+        <!-- ปุ่มแสดงเลข 1-10 ด้วย For Loop -->
+        <button class="button" onclick="showNumbers()">
+          แสดงเลข 1-10 (For Loop)
+        </button>
+        <p id="forResult"></p>
+
+        <br /><br />
+
+        <!-- ปุ่มรับค่าผู้ใช้ด้วย While Loop -->
+        <button class="button" onclick="startWhileLoop()">
+          เริ่มรับค่าผู้ใช้ (While Loop)
+        </button>
+        <p id="whileResult"></p>
+      </div>
+    </div>
+    <div class="wrapper">
+      <div class="container7">
+        <h2>Recursive Algorithm</h2>
+
+        <!-- ฟอร์มรับค่าสำหรับ Factorial -->
+        <h3>คำนวณ Factorial</h3>
+        <input
+          class="input"
+          type="number"
+          id="factorialInput"
+          placeholder="กรอกตัวเลข"
+          min="0"
+        />
+        <button class="button" onclick="calculateFactorial()">
+          คำนวณ Factorial
+        </button>
+        <p id="factorialResult"></p>
+
+        <!-- ฟอร์มรับค่าสำหรับ Fibonacci -->
+        <h3>คำนวณ Fibonacci Sequence</h3>
+        <input
+          class="input"
+          type="number"
+          id="fibonacciInput"
+          placeholder="กรอกลำดับ"
+          min="0"
+        />
+        <button class="button" onclick="calculateFibonacci()">
+          คำนวณ Fibonacci
+        </button>
+        <p id="fibonacciResult"></p>
+      </div>
+      <div class="container8">
+        <h1>Chat Application</h1>
+        <div id="chat-box">
+          <div id="messages"></div>
+        </div>
+        <input
+          class="input"
+          type="text"
+          id="message-input"
+          placeholder="Type a message..."
+        />
+        <button class="button" onclick="sendMessage()">Send</button>
+      </div>
+      <div class="container9">
+        <h2>Grade Calculator</h2>
+        <div>
+            <label>CSI101:
+                <input class="input" type="number" id="csi101" min="0" max="100" />
+                <span id="grade101"></span>
+            </label><br />
+
+            <label>CSI102:
+                <input class="input" type="number" id="csi102" min="0" max="100" />
+                <span id="grade102"></span>
+            </label><br />
+
+            <label>CSI203:
+                <input class="input" type="number" id="csi203" min="0" max="100" />
+                <span id="grade203"></span>
+            </label><br />
+
+            <label>CSI204:
+                <input class="input" type="number" id="csi204" min="0" max="100" />
+                <span id="grade204"></span>
+            </label><br />
+
+            <label>CSI305:
+                <input class="input" type="number" id="csi305" min="0" max="100" />
+                <span id="grade305"></span>
+            </label><br />
+
+            <button class="button" onclick="calculateGPA()">Calculate GPA</button>
+        </div>
+      </div>
+    </div>
+    <div class="wrapper">
+        <div class="container10">
+            <h2>To-Do List</h2>
+            <input class="input" type="text" id="todoInput" placeholder="Add a new task..." />
+            <button class="button" onclick="addTask()">Add Task</button>
+            
+            <ul id="todoList"></ul>
+        </div>
+        <div class="container11">
+            <h2>User Information</h2>
+        
+        <!-- Button to fetch data -->
+        <button class="button" onclick="fetchUserData()">Load Users</button>
+        
+        <!-- Container where user data will be displayed -->
+        <div id="userList"></div>
+      </div>
+      <div class="container12">
+        <h2>Lottery Number Generator</h2>
+        
+        <!-- Input for the user to guess the lottery number -->
+        <label for="userGuess">Enter your 6-digit lottery number:</label>
+        <input class="input" type="number" id="userGuess" placeholder="Enter a 6-digit number" maxlength="6" />
+        <button class="button" onclick="checkLottery()">Guess</button>
+
+        <!-- Result message -->
+        <div id="result"></div>
+
+        <!-- Display the generated lottery number -->
+        <p id="lotteryNumber" style="font-weight: bold;"></p>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>
